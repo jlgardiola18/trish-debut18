@@ -79,8 +79,15 @@ const soundToggle = document.getElementById("soundToggle");
 
 async function playBackgroundSound() {
     if (!backgroundSound || !soundToggle) return;
+
     try {
+        // Start the audio at 9 seconds
+        if (backgroundSound.currentTime < 9) {
+            backgroundSound.currentTime = 9;
+        }
+
         await backgroundSound.play();
+
         soundToggle.textContent = "♫ Sound on";
         soundToggle.setAttribute("aria-pressed", "true");
     } catch (error) {
