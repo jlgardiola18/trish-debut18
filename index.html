@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff3f5">
+    <title>Her Floral Debut | November 7, 2026</title>
+    <link rel="icon" type="image/png" href="files/flower.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="floral-bg landing-page">
+    <main class="invite-card">
+        <div class="eyebrow">A beautiful new chapter begins</div>
+        <div class="flower-mark" aria-hidden="true">✿</div>
+        <p class="script-label">You are warmly invited to celebrate</p>
+        <h1 class="debut-name">The Eighteenth Chapter of<span>TRISH</span></h1>
+        <p class="intro">An evening of flowers, love, laughter, and unforgettable memories.</p>
+
+        <div class="countdown-wrap">
+            <p class="countdown-heading">COUNTING DOWN TO THE CELEBRATION</p>
+            <div class="countdown" id="countdown" aria-live="polite">
+                <div><strong id="days">00</strong><span>Days</span></div>
+                <div><strong id="hours">00</strong><span>Hours</span></div>
+                <div><strong id="minutes">00</strong><span>Minutes</span></div>
+                <div><strong id="seconds">00</strong><span>Seconds</span></div>
+            </div>
+        </div>
+
+        <div class="event-details">
+            <span class="detail-flower">❀</span>
+            <p><strong>November 7, 2026</strong><br>Saturday 5:00 PM · Lim Beach Villa Purok 2A San Roque 1</p>
+            <span class="detail-flower">❀</span>
+        </div>
+
+        <a class="open-book-btn" href="book.html">Open Your Invitation <span aria-hidden="true">♡</span></a>
+        <p class="footer-note">With love, we can't wait to celebrate with you.</p>
+    </main>
+
+    <script>
+        // November 7, 2026 at 5:00 PM in the Philippines (UTC+8).
+        const debutDate = new Date('2026-11-07T17:00:00+08:00').getTime();
+        const ids = ['days', 'hours', 'minutes', 'seconds'];
+
+        function updateCountdown() {
+            const remaining = debutDate - Date.now();
+            const countdown = document.getElementById('countdown');
+            if (remaining <= 0) {
+                countdown.innerHTML = '<p class="event-live">The celebration is here! ✿</p>';
+                return;
+            }
+            const values = [
+                Math.floor(remaining / 86400000),
+                Math.floor((remaining % 86400000) / 3600000),
+                Math.floor((remaining % 3600000) / 60000),
+                Math.floor((remaining % 60000) / 1000)
+            ];
+            ids.forEach((id, i) => document.getElementById(id).textContent = String(values[i]).padStart(2, '0'));
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+
+</html>

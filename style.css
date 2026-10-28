@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Parisienne&display=swap');
+:root {
+    --rose: #b84d70;
+    --rose-dark: #843650;
+    --rose-light: #f8dce5;
+    --cream: #fffaf4;
+    --ink: #513b43;
+    --muted: #896d76;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--ink);
+    font: 16px/1.5 "DM Sans", sans-serif;
+}
+
+.floral-bg {
+    background-color: #fff6f5;
+    background-image: radial-gradient(ellipse at 8% 12%, rgba(248, 190, 207, .55) 0 2%, transparent 18%), radial-gradient(ellipse at 92% 84%, rgba(242, 205, 173, .42) 0 3%, transparent 20%), radial-gradient(ellipse at 90% 10%, rgba(225, 190, 207, .45) 0 2%, transparent 16%), radial-gradient(ellipse at 12% 90%, rgba(245, 210, 190, .4) 0 3%, transparent 17%), linear-gradient(135deg, #fff8f3 0%, #fff0f4 48%, #fff9f2 100%);
+    background-attachment: fixed;
+    position: relative;
+    isolation: isolate;
+}
+
+.floral-bg::before {
+    content: "✿  ❀  ✾";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    color: rgba(184, 77, 112, .15);
+    font-size: clamp(2.8rem, 7vw, 6.5rem);
+    letter-spacing: clamp(2rem, 10vw, 9rem);
+    line-height: 1.9;
+    overflow: hidden;
+    word-break: break-all;
+    padding: 1rem;
+}
+
+.landing-page {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 34px 18px;
+}
+
+.invite-card {
+    width: min(100%, 740px);
+    text-align: center;
+    padding: clamp(28px, 6vw, 64px);
+    border: 1px solid rgba(184, 77, 112, .24);
+    border-radius: 280px 280px 24px 24px;
+    background: rgba(255, 252, 248, .86);
+    box-shadow: 0 22px 65px rgba(126, 61, 83, .12);
+    position: relative;
+    overflow: hidden;
+}
+
+.invite-card::before,
+.invite-card::after {
+    content: "❀";
+    position: absolute;
+    color: #d99aae;
+    font-size: 2.8rem;
+    opacity: .7;
+}
+
+.invite-card::before {
+    top: 20px;
+    left: 24px;
+}
+
+.invite-card::after {
+    right: 24px;
+    bottom: 18px;
+}
+
+.eyebrow,
+.countdown-heading {
+    color: var(--rose);
+    font-size: .72rem;
+    letter-spacing: .19em;
+    font-weight: 700;
+}
+
+.flower-mark {
+    color: var(--rose);
+    font-size: 2.6rem;
+    margin: 10px 0 0;
+}
+
+.script-label {
+    font: 1.7rem "Parisienne", cursive;
+    color: var(--rose-dark);
+    margin: 0 0 2px;
+}
+
+.debut-name {
+    font: 500 clamp(3rem, 10vw, 5.6rem)/1.05 "Playfair Display", serif;
+    margin: 0;
+    color: #704455;
+}
+
+.debut-name span {
+    display: block;
+    color: var(--rose);
+    font-style: italic;
+}
+
+.intro {
+    max-width: 420px;
+    margin: 18px auto 26px;
+    color: var(--muted);
+}
+
+.countdown-wrap {
+    padding: 18px 0 20px;
+    border-top: 1px solid #edd5dc;
+    border-bottom: 1px solid #edd5dc;
+}
+
+.countdown-heading {
+    font-size: .65rem;
+    margin: 0 0 14px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: clamp(8px, 3vw, 24px);
+}
+
+.countdown>div {
+    min-width: clamp(54px, 12vw, 82px);
+    padding: 9px 5px;
+    border-radius: 12px;
+    background: #fff0f3;
+    border: 1px solid #f0d5dd;
+}
+
+.countdown strong {
+    display: block;
+    font: 600 clamp(1.45rem, 4vw, 2.15rem) "Playfair Display", serif;
+    color: var(--rose-dark);
+}
+
+.countdown span {
+    display: block;
+    color: var(--muted);
+    font-size: .68rem;
+}
+
+.event-live {
+    color: var(--rose-dark);
+    font: 1.5rem "Parisienne", cursive;
+    margin: 0;
+}
+
+.event-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0 24px;
+}
+
+.event-details p {
+    margin: 0;
+    color: var(--muted);
+    font-size: .92rem;
+}
+
+.event-details strong {
+    font: 600 1.2rem "Playfair Display", serif;
+    color: var(--rose-dark);
+}
+
+.detail-flower {
+    color: #d99aae;
+    font-size: 1.6rem;
+}
+
+.open-book-btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 999px;
+    background: var(--rose);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 8px 18px rgba(184, 77, 112, .2);
+    transition: transform .2s, background .2s;
+}
+
+.open-book-btn:hover {
+    background: var(--rose-dark);
+    transform: translateY(-2px);
+}
+
+.footer-note {
+    color: #a78a92;
+    font: 1.25rem "Parisienne", cursive;
+    margin: 20px 0 0;
+}
+
+
+/* Flip-book layout */
+
+body.book-page {
+    display: flex;
+    min-height: 100dvh;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.book {
+    position: relative;
+    display: flex;
+    margin: auto;
+    width: min(40cqmin, 620px);
+    pointer-events: none;
+    transform-style: preserve-3d;
+    transition: translate 1s;
+    translate: calc(min(var(--c), 1) * 50%) 0%;
+    rotate: 1 0 0 30deg;
+    counter-reset: page -1;
+}
+
+.book a {
+    color: inherit;
+}
+
+.page {
+    --thickness: 4;
+    flex: none;
+    display: flex;
+    width: 100%;
+    font-size: 2cqmin;
+    pointer-events: all;
+    user-select: none;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transition: transform 1s, rotate 1s ease-in calc((min(var(--i), var(--c)) - max(var(--i), var(--c))) * 50ms);
+    translate: calc(var(--i) * -100%) 0 0;
+    transform: translateZ(calc((var(--c) - var(--i) - .5) * calc(var(--thickness) * .23cqmin)));
+    rotate: 0 1 0 calc(clamp(0, var(--c) - var(--i), 1) * -180deg);
+    box-shadow: 0 .5em 1em -.2em #643c4b25;
+}
+
+.front,
+.back {
+    position: relative;
+    flex: none;
+    width: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    background-color: #fffaf8;
+    translate: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 2em;
+    border: 1px solid #d9a8b7;
+}
+
+.front:has(img),
+.back:has(img) {
+    padding: 0;
+}
+
+.front img,
+.back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.front::after,
+.back::after {
+    position: absolute;
+    bottom: 1em;
+    counter-increment: page;
+    content: counter(page) ".";
+    font-size: .8em;
+    color: #a36d7e;
+}
+
+.back {
+    translate: -100% 0;
+    rotate: 0 1 0 180deg;
+}
+
+.front::after {
+    right: 1em;
+}
+
+.back::after {
+    left: 1em;
+}
+
+.cover::after {
+    content: "";
+}
+
+.front {
+    background: linear-gradient(110deg, #fffaf8 0%, #fff0f3 100%);
+    border-radius: .1em .5em .5em .1em;
+}
+
+.back {
+    background: linear-gradient(250deg, #fffaf8 0%, #fff0f3 100%);
+    border-radius: .5em .1em .1em .5em;
+}
+
+.cover {
+    background: linear-gradient(rgba(113, 50, 75, .25), rgba(113, 50, 75, .25)), #b86b85 url("files/1st.jpg") 50% / cover;
+    color: #fffaf8;
+}
+
+.cover h1,
+.cover h3 {
+    font-family: "Playfair Display", serif;
+}
+
+.sound-toggle {
+    position: fixed;
+    z-index: 20;
+    right: 16px;
+    top: 16px;
+    border: 1px solid #e0a9ba;
+    border-radius: 999px;
+    padding: 10px 14px;
+    background: rgba(255, 250, 248, .94);
+    color: var(--rose-dark);
+    font: 600 .85rem "DM Sans", sans-serif;
+    cursor: pointer;
+    box-shadow: 0 5px 18px #643c4b18;
+}
+
+.sound-toggle:hover {
+    background: #fff0f3;
+}
+
+@media (max-width: 700px) {
+    .invite-card {
+        border-radius: 180px 180px 22px 22px;
+    }
+    .eyebrow {
+        letter-spacing: .1em;
+    }
+    body.book-page {
+        overflow: auto;
+    }
+    .book {
+        width: min(78vw, 460px);
+        margin: 110px auto 40px;
+    }
+    .page {
+        font-size: 3.7cqmin;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
+
+
+/* Landing page: fit the invitation inside one screen on desktop and mobile */
+
+html:has(body.landing-page),
+body.landing-page {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+}
+
+body.landing-page {
+    height: 100vh;
+    height: 100svh;
+}
+
+.landing-page {
+    height: 100vh;
+    height: 100svh;
+    min-height: 0;
+    overflow: hidden;
+    padding: clamp(8px, 2.2vh, 22px) clamp(8px, 2vw, 20px);
+}
+
+.invite-card {
+    width: min(100%, 680px);
+    max-height: 100%;
+    padding: clamp(12px, 2.5vh, 26px) clamp(14px, 4vw, 40px);
+    border-radius: clamp(70px, 10vw, 150px) clamp(70px, 10vw, 150px) 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.invite-card::before {
+    top: 10px;
+    left: 14px;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.invite-card::after {
+    right: 14px;
+    bottom: 8px;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.eyebrow {
+    font-size: clamp(.52rem, 1.3vh, .7rem);
+    letter-spacing: .12em;
+    margin: 0;
+}
+
+.flower-mark {
+    font-size: clamp(1.4rem, 4vh, 2.3rem);
+    line-height: 1;
+    margin: clamp(2px, .7vh, 8px) 0 0;
+}
+
+.script-label {
+    font-size: clamp(1.05rem, 3vh, 1.55rem);
+    line-height: 1.15;
+}
+
+.debut-name {
+    font-size: clamp(2.35rem, 8vh, 4.8rem);
+    line-height: .98;
+}
+
+.intro {
+    font-size: clamp(.72rem, 1.8vh, .92rem);
+    line-height: 1.35;
+    margin: clamp(6px, 1.4vh, 14px) auto clamp(8px, 1.8vh, 18px);
+    max-width: 390px;
+}
+
+.countdown-wrap {
+    width: 100%;
+    padding: clamp(8px, 1.7vh, 16px) 0;
+}
+
+.countdown-heading {
+    font-size: clamp(.48rem, 1.2vh, .62rem);
+    margin: 0 0 clamp(5px, 1vh, 10px);
+    letter-spacing: .12em;
+}
+
+.countdown {
+    gap: clamp(5px, 1.8vw, 14px);
+}
+
+.countdown>div {
+    min-width: 0;
+    flex: 1;
+    max-width: 78px;
+    padding: clamp(5px, 1.2vh, 10px) 3px;
+    border-radius: 9px;
+}
+
+.countdown strong {
+    font-size: clamp(1.15rem, 3.7vh, 1.9rem);
+    line-height: 1.1;
+}
+
+.countdown span {
+    font-size: clamp(.55rem, 1.35vh, .68rem);
+}
+
+.event-details {
+    gap: clamp(5px, 2vw, 14px);
+    margin: clamp(8px, 1.8vh, 18px) 0 clamp(8px, 1.8vh, 18px);
+}
+
+.event-details p {
+    font-size: clamp(.68rem, 1.7vh, .86rem);
+    line-height: 1.4;
+}
+
+.event-details strong {
+    font-size: clamp(.9rem, 2.3vh, 1.15rem);
+}
+
+.detail-flower {
+    font-size: clamp(1rem, 2.7vh, 1.5rem);
+}
+
+.open-book-btn {
+    padding: clamp(8px, 1.5vh, 12px) clamp(17px, 4vw, 25px);
+    font-size: clamp(.72rem, 1.7vh, .9rem);
+    flex-shrink: 0;
+}
+
+.footer-note {
+    font-size: clamp(.9rem, 2.2vh, 1.15rem);
+    line-height: 1.15;
+    margin: clamp(7px, 1.5vh, 14px) 0 0;
+}
+
+
+/* Extra-short screens, including small phones in landscape */
+
+@media (max-height: 650px) {
+    .landing-page {
+        padding: 5px 8px;
+    }
+    .invite-card {
+        padding: 8px 14px;
+        border-radius: 60px 60px 16px 16px;
+    }
+    .flower-mark {
+        margin-top: 1px;
+    }
+    .intro {
+        margin-top: 5px;
+        margin-bottom: 6px;
+    }
+    .countdown-wrap {
+        padding: 6px 0;
+    }
+    .event-details {
+        margin: 6px 0;
+    }
+    .footer-note {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 380px) {
+    .invite-card {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .eyebrow {
+        letter-spacing: .07em;
+    }
+    .event-details {
+        gap: 5px;
+    }
+    .detail-flower {
+        display: none;
+    }
+}
