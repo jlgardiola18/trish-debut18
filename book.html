@@ -12,6 +12,16 @@
 <body class="floral-bg book-page">
     <audio id="backgroundSound" src="files/background music.mp3" loop preload="auto"></audio>
     <button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false">♫ Play sound</button>
+    <section class="mobile-reader" aria-label="Photo book">
+        <div class="mobile-page" id="mobilePage" role="button" tabindex="0" aria-label="Advance to next page">
+            <img id="mobilePageImage" src="files/01.jpg" alt="01.jpg" />
+        </div>
+        <div class="mobile-reader-nav" aria-label="Page navigation">
+            <button class="page-arrow" id="previousPage" type="button" aria-label="Previous page">‹</button>
+            <span class="page-count" id="pageCount" aria-live="polite">1 / 14</span>
+            <button class="page-arrow" id="nextPage" type="button" aria-label="Next page">›</button>
+        </div>
+    </section>
     <div class="book">
         <div class="page">
             <div class="front cover">
