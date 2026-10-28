@@ -82,8 +82,8 @@ async function playBackgroundSound() {
 
     try {
         // Start the audio at 9 seconds
-        if (backgroundSound.currentTime < 9) {
-            backgroundSound.currentTime = 9;
+        if (backgroundSound.currentTime < 65) {
+            backgroundSound.currentTime = 65;
         }
 
         await backgroundSound.play();
